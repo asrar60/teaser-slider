@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+.wrapper{
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+
+  .wrapper::after{
+      position: fixed;
+      content: '';
+      display: block;
+      width: 10%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to left, rgb(255, 255, 255), rgba(0, 0, 0, 0));
+  }
+
+   .wrapper::-webkit-scrollbar {
+      display: none;
+  } 
+
+  .wrapper .box {
+      background-color: white;
+      flex: 0 0 auto;
+  }
