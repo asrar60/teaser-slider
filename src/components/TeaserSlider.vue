@@ -1,11 +1,10 @@
 <template>
-    
-       <ul class="wrapper" style="width:100%;height:100%;">
-         <li v-for="card in cards" :key="card" class="box rounded-2xl m-5 shadow-lg shadow-lime-500" style="width:80%;height:80%;contain: paint; box-shadow: -2px 2px #D9E15F;">
+       <ul class="wrapper flex lg:flex-col  " >
+         <li v-for="card in cards" :key="card" class="box rounded-2xl m-5 w-4/5 h-full">
               <a :href="card.link"> 
-                <img class="" style="width:100%;height:100%;" :src="card.image" :alt="card.text">
+                <img class="w-full h-full" :src="card.image" :alt="card.text">
               </a>
-              <div class=" flex px-2 items-center h-12">
+              <div class=" flex px-3 items-center h-12">
                 <span class="text-teal-600 text-xl font-bold">{{card.text}}</span>
                 <span class="ml-auto text-pink-900">
                   <span class="text-base">ab </span>
@@ -14,7 +13,6 @@
               </div>
          </li>
        </ul>
-    
 </template>
 
 <script>

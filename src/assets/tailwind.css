@@ -4,7 +4,6 @@
 @tailwind screens;
 
 .wrapper{
-    display: flex;
     overflow-x: auto;
     flex-wrap: nowrap;
     position: relative;
@@ -29,4 +28,6 @@
   .wrapper .box {
       background-color: white;
       flex: 0 0 auto;
+      contain: paint; 
+      box-shadow: -2px 2px #D9E15F;
   }
