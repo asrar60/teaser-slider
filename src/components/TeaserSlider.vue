@@ -1,11 +1,72 @@
 <template>
-    <div class="wrapper" style="width:100%;height:100%;">
-
-    </div>
+    
+       <ul class="wrapper" style="width:100%;height:100%;">
+         <li v-for="card in cards" :key="card" class="box rounded-2xl m-5 shadow-lg shadow-lime-500" style="width:80%;height:80%;contain: paint; box-shadow: -2px 2px #D9E15F;">
+              <a :href="card.link"> 
+                <img class="" style="width:100%;height:100%;" :src="card.image" :alt="card.text">
+              </a>
+              <div class=" flex px-2 items-center h-12">
+                <span class="text-teal-600 text-xl font-bold">{{card.text}}</span>
+                <span class="ml-auto text-pink-900">
+                  <span class="text-base">ab </span>
+                  <span class="text-xl font-bold">€ {{card.price}}</span>
+                </span>
+              </div>
+         </li>
+       </ul>
+    
 </template>
 
 <script>
 export default {
+    data() {
+        return {
+            cards: [
+                {
+                "text": "Ägypten",
+                "price": 1237,
+                "image": "https://images.flux.reisen/hotel/1262/1/s",
+                "link": "https://google.com"
+                },
+                {
+                "text": "Griechenland",
+                "price": 334,
+                "image": "https://images.flux.reisen/hotel/1262/1/s",
+                "link": "https://google.com"
+                },
+                {
+                "text": "Türkei",
+                "price": 237,
+                "image": "https://images.flux.reisen/hotel/1262/1/s",
+                "link": "https://google.com"
+                },
+                {
+                "text": "Italien",
+                "price": 237,
+                "image": "https://images.flux.reisen/hotel/1262/1/s",
+                "link": "https://google.com"
+                },
+                {
+                "text": "Spanien",
+                "price": 379,
+                "image": "https://images.flux.reisen/hotel/1262/1/s",
+                "link": "https://google.com"
+                },
+                {
+                "text": "Kroatien",
+                "price": 88,
+                "image": "https://images.flux.reisen/hotel/1262/1/s",
+                "link": "https://google.com"
+                },
+                {
+                "text": "Österreich",
+                "price": 0,
+                "image": "https://images.flux.reisen/hotel/1262/1/s",
+                "link": "https://google.com"
+                }
+            ]
+        }
+    }
 
 }
 </script>
